@@ -1,0 +1,145 @@
+{
+  "system": {
+    "name": "BugScope",
+    "version": "1.0.0",
+    "environment": "production-demo",
+    "last_model_train": "2026-10-10T18:42:00Z",
+    "last_data_refresh": "2026-10-11T06:00:00Z",
+    "api_latency_ms_p50": 18,
+    "api_latency_ms_p95": 42,
+    "uptime_hours": 720,
+    "predictions_24h": 1847,
+    "high_risk_open": 23,
+    "modules_scored_total": 10000
+  },
+  "projects": [
+    {
+      "id": "PRJ-001",
+      "name": "Payments Core",
+      "repository": "github.com/acme/payments-core",
+      "language_primary": "Java",
+      "modules": 142,
+      "defect_rate": 0.38,
+      "avg_complexity": 16.2,
+      "health": "At risk"
+    },
+    {
+      "id": "PRJ-002",
+      "name": "Customer Portal",
+      "repository": "github.com/acme/customer-portal",
+      "language_primary": "JavaScript",
+      "modules": 89,
+      "defect_rate": 0.19,
+      "avg_complexity": 9.4,
+      "health": "Stable"
+    },
+    {
+      "id": "PRJ-003",
+      "name": "Data Pipeline",
+      "repository": "github.com/acme/data-pipeline",
+      "language_primary": "Python",
+      "modules": 67,
+      "defect_rate": 0.27,
+      "avg_complexity": 12.8,
+      "health": "Watch"
+    },
+    {
+      "id": "PRJ-004",
+      "name": "Legacy Billing Adapter",
+      "repository": "github.com/acme/billing-adapter",
+      "language_primary": "C++",
+      "modules": 54,
+      "defect_rate": 0.51,
+      "avg_complexity": 24.1,
+      "health": "Critical"
+    },
+    {
+      "id": "PRJ-005",
+      "name": "Identity Service",
+      "repository": "github.com/acme/identity-svc",
+      "language_primary": "C#",
+      "modules": 41,
+      "defect_rate": 0.14,
+      "avg_complexity": 8.1,
+      "health": "Stable"
+    },
+    {
+      "id": "PRJ-006",
+      "name": "Mobile BFF",
+      "repository": "github.com/acme/mobile-bff",
+      "language_primary": "Java",
+      "modules": 36,
+      "defect_rate": 0.22,
+      "avg_complexity": 11.0,
+      "health": "Stable"
+    }
+  ],
+  "modules": [
+    {"id":"MOD-1001","project":"Payments Core","name":"SettlementEngine","language":"Java","module_type":"Core","loc":4820,"cyclomatic_complexity":41,"code_churn":72,"review_coverage":0.38,"test_coverage":0.41,"team_experience":0.52,"risk_band":"High","defect_probability":0.81,"defective":1,"last_scored":"2026-10-11T04:12:00Z"},
+    {"id":"MOD-1002","project":"Payments Core","name":"LedgerWriter","language":"Java","module_type":"Data","loc":2100,"cyclomatic_complexity":22,"code_churn":35,"review_coverage":0.61,"test_coverage":0.55,"team_experience":0.60,"risk_band":"Medium","defect_probability":0.48,"defective":0,"last_scored":"2026-10-11T03:55:00Z"},
+    {"id":"MOD-1003","project":"Customer Portal","name":"CheckoutWizard","language":"JavaScript","module_type":"UI","loc":960,"cyclomatic_complexity":11,"code_churn":18,"review_coverage":0.84,"test_coverage":0.79,"team_experience":0.71,"risk_band":"Low","defect_probability":0.19,"defective":0,"last_scored":"2026-10-11T02:40:00Z"},
+    {"id":"MOD-1004","project":"Legacy Billing Adapter","name":"CobolBridge","language":"C++","module_type":"Core","loc":6200,"cyclomatic_complexity":58,"code_churn":90,"review_coverage":0.22,"test_coverage":0.18,"team_experience":0.35,"risk_band":"High","defect_probability":0.92,"defective":1,"last_scored":"2026-10-10T22:10:00Z"},
+    {"id":"MOD-1005","project":"Data Pipeline","name":"IngestKafkaWorker","language":"Python","module_type":"API","loc":1340,"cyclomatic_complexity":15,"code_churn":28,"review_coverage":0.70,"test_coverage":0.66,"team_experience":0.68,"risk_band":"Medium","defect_probability":0.41,"defective":0,"last_scored":"2026-10-11T01:20:00Z"},
+    {"id":"MOD-1006","project":"Identity Service","name":"TokenIssuer","language":"C#","module_type":"Core","loc":780,"cyclomatic_complexity":8,"code_churn":9,"review_coverage":0.91,"test_coverage":0.88,"team_experience":0.80,"risk_band":"Low","defect_probability":0.11,"defective":0,"last_scored":"2026-10-11T00:05:00Z"},
+    {"id":"MOD-1007","project":"Payments Core","name":"FraudRules","language":"Java","module_type":"Core","loc":3050,"cyclomatic_complexity":29,"code_churn":44,"review_coverage":0.49,"test_coverage":0.52,"team_experience":0.55,"risk_band":"High","defect_probability":0.67,"defective":1,"last_scored":"2026-10-10T20:30:00Z"},
+    {"id":"MOD-1008","project":"Mobile BFF","name":"ProfileAggregator","language":"Java","module_type":"API","loc":1120,"cyclomatic_complexity":13,"code_churn":16,"review_coverage":0.76,"test_coverage":0.72,"team_experience":0.65,"risk_band":"Low","defect_probability":0.24,"defective":0,"last_scored":"2026-10-11T05:01:00Z"},
+    {"id":"MOD-1009","project":"Customer Portal","name":"AuthRedirect","language":"JavaScript","module_type":"API","loc":420,"cyclomatic_complexity":6,"code_churn":7,"review_coverage":0.93,"test_coverage":0.90,"team_experience":0.78,"risk_band":"Low","defect_probability":0.09,"defective":0,"last_scored":"2026-10-10T18:00:00Z"},
+    {"id":"MOD-1010","project":"Data Pipeline","name":"TransformSparkJob","language":"Python","module_type":"Data","loc":2680,"cyclomatic_complexity":24,"code_churn":51,"review_coverage":0.45,"test_coverage":0.40,"team_experience":0.48,"risk_band":"High","defect_probability":0.73,"defective":1,"last_scored":"2026-10-11T04:48:00Z"},
+    {"id":"MOD-1011","project":"Legacy Billing Adapter","name":"RateTableParser","language":"C++","module_type":"Utility","loc":1890,"cyclomatic_complexity":19,"code_churn":33,"review_coverage":0.40,"test_coverage":0.37,"team_experience":0.42,"risk_band":"Medium","defect_probability":0.56,"defective":1,"last_scored":"2026-10-10T16:22:00Z"},
+    {"id":"MOD-1012","project":"Identity Service","name":"SessionStore","language":"C#","module_type":"Data","loc":540,"cyclomatic_complexity":5,"code_churn":4,"review_coverage":0.95,"test_coverage":0.92,"team_experience":0.85,"risk_band":"Low","defect_probability":0.07,"defective":0,"last_scored":"2026-10-11T03:11:00Z"}
+  ],
+  "alerts": [
+    {"id":"ALT-901","severity":"High","status":"Open","module_id":"MOD-1004","module":"CobolBridge","project":"Legacy Billing Adapter","description":"Predicted defect probability 92%. Extremely high complexity and low review coverage.","created_at":"2026-10-10T22:15:00Z","owner":"Platform QA"},
+    {"id":"ALT-902","severity":"High","status":"Open","module_id":"MOD-1001","module":"SettlementEngine","project":"Payments Core","description":"LOC > 4k with cyclomatic complexity 41. Recommend split and targeted tests.","created_at":"2026-10-11T04:20:00Z","owner":"Payments Eng"},
+    {"id":"ALT-903","severity":"High","status":"Acknowledged","module_id":"MOD-1010","module":"TransformSparkJob","project":"Data Pipeline","description":"Churn spike + review coverage below gate (45%).","created_at":"2026-10-11T04:50:00Z","owner":"Data Platform"},
+    {"id":"ALT-904","severity":"Medium","status":"Open","module_id":"MOD-1007","module":"FraudRules","project":"Payments Core","description":"Process risk elevated; team experience and test coverage lag peers.","created_at":"2026-10-10T20:35:00Z","owner":"Payments Eng"},
+    {"id":"ALT-905","severity":"Medium","status":"Open","module_id":"MOD-1011","module":"RateTableParser","project":"Legacy Billing Adapter","description":"Medium band with upward trend over last 3 scores.","created_at":"2026-10-10T16:30:00Z","owner":"Platform QA"},
+    {"id":"ALT-906","severity":"Low","status":"Closed","module_id":"MOD-1006","module":"TokenIssuer","project":"Identity Service","description":"Previous false positive cleared after coverage improvement.","created_at":"2026-10-09T12:00:00Z","owner":"Identity Team"}
+  ],
+  "activity": [
+    {"ts":"2026-10-11T05:12:00Z","actor":"system","action":"model_score","detail":"Scored MOD-1008 ProfileAggregator → Low (24%)"},
+    {"ts":"2026-10-11T04:50:00Z","actor":"system","action":"alert_created","detail":"ALT-903 opened for TransformSparkJob"},
+    {"ts":"2026-10-11T04:20:00Z","actor":"system","action":"alert_created","detail":"ALT-902 opened for SettlementEngine"},
+    {"ts":"2026-10-11T04:12:00Z","actor":"ci-bot","action":"model_score","detail":"Scored MOD-1001 SettlementEngine → High (81%)"},
+    {"ts":"2026-10-11T03:55:00Z","actor":"ci-bot","action":"model_score","detail":"Scored MOD-1002 LedgerWriter → Medium (48%)"},
+    {"ts":"2026-10-11T02:40:00Z","actor":"ci-bot","action":"model_score","detail":"Scored MOD-1003 CheckoutWizard → Low (19%)"},
+    {"ts":"2026-10-11T01:20:00Z","actor":"data-platform","action":"data_refresh","detail":"Metrics snapshot refreshed for Data Pipeline (67 modules)"},
+    {"ts":"2026-10-10T22:15:00Z","actor":"system","action":"alert_created","detail":"ALT-901 opened for CobolBridge"},
+    {"ts":"2026-10-10T18:42:00Z","actor":"ml-pipeline","action":"model_train","detail":"Gradient Boosting retrained · F1 0.607 · AUC 0.684"},
+    {"ts":"2026-10-10T16:22:00Z","actor":"ci-bot","action":"model_score","detail":"Scored MOD-1011 RateTableParser → Medium (56%)"},
+    {"ts":"2026-10-09T14:00:00Z","actor":"qa-lead","action":"gate_update","detail":"Raised review coverage gate from 0.50 to 0.55 for Core modules"},
+    {"ts":"2026-10-09T12:00:00Z","actor":"identity-team","action":"alert_closed","detail":"ALT-906 closed for TokenIssuer"}
+  ],
+  "quality_gates": {
+    "review_coverage_min": 0.55,
+    "test_coverage_min": 0.50,
+    "max_cyclomatic": 25,
+    "max_loc_core": 3000,
+    "high_risk_threshold": 0.60,
+    "medium_risk_threshold": 0.35
+  },
+  "language_breakdown": {
+    "Java": 3169,
+    "C++": 2207,
+    "Python": 2082,
+    "C#": 1583,
+    "JavaScript": 959
+  },
+  "module_type_breakdown": {
+    "Core": 2854,
+    "API": 2017,
+    "Data": 1445,
+    "Utility": 1379,
+    "UI": 1368,
+    "Test": 937
+  },
+  "daily_predictions": [
+    {"date":"2026-10-05","count":1620,"high":28,"medium":41,"low":1551},
+    {"date":"2026-10-06","count":1712,"high":31,"medium":38,"low":1643},
+    {"date":"2026-10-07","count":1588,"high":25,"medium":44,"low":1519},
+    {"date":"2026-10-08","count":1801,"high":29,"medium":47,"low":1725},
+    {"date":"2026-10-09","count":1694,"high":26,"medium":40,"low":1628},
+    {"date":"2026-10-10","count":1755,"high":30,"medium":43,"low":1682},
+    {"date":"2026-10-11","count":1847,"high":23,"medium":39,"low":1785}
+  ]
+}
